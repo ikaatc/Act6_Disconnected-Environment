@@ -64,17 +64,11 @@ namespace Act6_Disconnected_Environment
         private void refreshform()
         {
             txtNIM.Enabled = false;
-            txtNIM.Text = "";
             txtNama.Enabled = false;
-            txtNama.Text = "";
             cbxJenisKelamin.Enabled = false;
-            cbxJenisKelamin.Text = "";
             txtAlamat.Enabled = false;
-            txtAlamat.Text = "";
             dtTanggalLahir.Enabled = false;
-            dtTanggalLahir.Text = "";
             cbxProdi.Enabled = false;
-            cbxProdi.Text = "";
             btnSave.Enabled = false;
             btnClear.Enabled = false;
             clearBinding();

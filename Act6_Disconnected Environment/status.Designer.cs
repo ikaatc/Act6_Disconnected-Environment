@@ -36,23 +36,23 @@ namespace Act6_Disconnected_Environment
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cbxTahunMasuk = new System.Windows.Forms.ComboBox();
+            this.statusmahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.act6DataSet = new Act6_Disconnected_Environment.Act6DataSet();
             this.cbxStatusMahasiswa = new System.Windows.Forms.ComboBox();
             this.cbxNama = new System.Windows.Forms.ComboBox();
+            this.mahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtNIM = new System.Windows.Forms.Label();
             this.btnOpen = new System.Windows.Forms.Button();
-            this.act6DataSet = new Act6_Disconnected_Environment.Act6DataSet();
-            this.mahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mahasiswaTableAdapter = new Act6_Disconnected_Environment.Act6DataSetTableAdapters.mahasiswaTableAdapter();
-            this.statusmahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.status_mahasiswaTableAdapter = new Act6_Disconnected_Environment.Act6DataSetTableAdapters.status_mahasiswaTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusmahasiswaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.act6DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statusmahasiswaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -110,6 +110,16 @@ namespace Act6_Disconnected_Environment
             this.cbxTahunMasuk.Size = new System.Drawing.Size(187, 28);
             this.cbxTahunMasuk.TabIndex = 5;
             // 
+            // statusmahasiswaBindingSource
+            // 
+            this.statusmahasiswaBindingSource.DataMember = "status_mahasiswa";
+            this.statusmahasiswaBindingSource.DataSource = this.act6DataSet;
+            // 
+            // act6DataSet
+            // 
+            this.act6DataSet.DataSetName = "Act6DataSet";
+            this.act6DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cbxStatusMahasiswa
             // 
             this.cbxStatusMahasiswa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.statusmahasiswaBindingSource, "status_mahasiswa", true));
@@ -131,6 +141,11 @@ namespace Act6_Disconnected_Environment
             this.cbxNama.Size = new System.Drawing.Size(187, 28);
             this.cbxNama.TabIndex = 7;
             this.cbxNama.SelectedIndexChanged += new System.EventHandler(this.cbxNama_SelectedIndexChanged);
+            // 
+            // mahasiswaBindingSource
+            // 
+            this.mahasiswaBindingSource.DataMember = "mahasiswa";
+            this.mahasiswaBindingSource.DataSource = this.act6DataSet;
             // 
             // btnAdd
             // 
@@ -187,24 +202,9 @@ namespace Act6_Disconnected_Environment
             this.btnOpen.UseVisualStyleBackColor = true;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
-            // act6DataSet
-            // 
-            this.act6DataSet.DataSetName = "Act6DataSet";
-            this.act6DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mahasiswaBindingSource
-            // 
-            this.mahasiswaBindingSource.DataMember = "mahasiswa";
-            this.mahasiswaBindingSource.DataSource = this.act6DataSet;
-            // 
             // mahasiswaTableAdapter
             // 
             this.mahasiswaTableAdapter.ClearBeforeFill = true;
-            // 
-            // statusmahasiswaBindingSource
-            // 
-            this.statusmahasiswaBindingSource.DataMember = "status_mahasiswa";
-            this.statusmahasiswaBindingSource.DataSource = this.act6DataSet;
             // 
             // status_mahasiswaTableAdapter
             // 
@@ -244,9 +244,9 @@ namespace Act6_Disconnected_Environment
             this.Text = "status";
             this.Load += new System.EventHandler(this.status_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusmahasiswaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.act6DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mahasiswaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statusmahasiswaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
