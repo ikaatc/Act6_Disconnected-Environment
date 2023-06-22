@@ -64,12 +64,17 @@ namespace Act6_Disconnected_Environment
         private void refreshform()
         {
             txtNIM.Enabled = false;
+            txtNIM.Text = "";
             txtNama.Enabled = false;
+            txtNama.Text = "";
             cbxJenisKelamin.Enabled = false;
+            cbxJenisKelamin.Text = "";
             txtAlamat.Enabled = false;
+            txtAlamat.Text = "";
             dtTanggalLahir.Enabled = false;
+            dtTanggalLahir.Text = "";
             cbxProdi.Enabled = false;
-            btnAdd.Enabled = true;
+            cbxProdi.Text = "";
             btnSave.Enabled = false;
             btnClear.Enabled = false;
             clearBinding();
@@ -176,7 +181,7 @@ namespace Act6_Disconnected_Environment
             this.prodiTableAdapter.Fill(this.act6DataSet.prodi);
             // TODO: This line of code loads data into the 'act6DataSet.mahasiswa' table. You can move, or remove it, as needed.
             this.mahasiswaTableAdapter.Fill(this.act6DataSet.mahasiswa);
-
+            refreshform();
         }
     }
 }
